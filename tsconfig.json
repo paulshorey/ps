@@ -12,7 +12,22 @@
     "pages/_document.backup",
     "pages/api/console/...action.js"
   ],
-  "exclude": ["node_modules", "dist", "out", ".next", ".backup", "public"],
+  "exclude": [
+    "docs",
+    "node_modules",
+    "dist",
+    "umd",
+    "esm",
+    "out",
+    "test",
+    ".next",
+    ".backup",
+    "public",
+    "storybook-static",
+    "**/*.test.ts",
+    "**/*.test.js",
+    "**/*.stories.tsx"
+  ],
   "plugins": [
     {
       "name": "typescript-styled-plugin",
@@ -20,6 +35,7 @@
     }
   ],
   "compilerOptions": {
+    "outDir": "esm",
     "jsxImportSource": "@emotion/react",
     "baseUrl": ".",
     "paths": {},
